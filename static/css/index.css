@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://css.gg/menu-grid-o.css');
+@import url('https://css.gg/chevron-right.css');
+@import url('https://css.gg/chevron-left.css');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html
+{
+    font-size: 11px;
+    scroll-behavior: smooth;
+}
+
+.large-text
+{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.no-disc
+{
+    list-style: none;
+    text-decoration: none;
+}
+
+.white-btn
+{
+    border: 0;
+    border-radius: 15px;
+    background:#fff;
+    color: blue;
+    padding: 7px 30px;
+    box-shadow: 0 1px 3px 1px rgb(146, 145, 145);
+    font-weight: 700;
+    cursor: pointer;
+    transition: color,background-color ease-in 500ms;
+    overflow: visible;
+}
+
+.white-btn:hover
+{
+    background: blue;
+    color: #fff;
+}
+
+body
+{
+    /* height: 1080vh; */
+    background: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.to-top
+{
+    background: #1f1f1f;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    opacity: 0;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all 400ms;
+}
+
+.to-top.active
+{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #fff;
+    padding-right: 2rem;
+}
+
+.brand-introduction
+{
+    padding: 1rem 2rem 0 2rem;
+}
+
+.nav-links-container li
+{
+    display: inline-block;
+    padding: 1.3rem 1.2rem 0.6rem 0;
+}
+
+.nav-link
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: border-bottom ease-in 200ms;
+}
+
+li a.active
+{
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+.nav-link:hover
+{
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+.company
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.company-name
+{
+    margin-left:35px;
+    margin-top: 65px;
+}
+
+.logo
+{
+    width: 13rem;
+}
+
+.profession-container
+{
+    text-align: end;
+}
+
+.profession
+{
+    border: 1px groove rgb(14, 13, 13);
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.profession-container ul
+{
+    margin-top: 30px;
+}
+
+.profession-container li
+{
+    font-size: 1.4rem;
+    padding: 1px 0;
+    font-weight: 500;
+}
+
+.brand-details-container
+{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 14px;
+}
+
+.about-brand-body
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.about-brand-heading
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.about-brand-content
+{
+    text-align: justify;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.hire-me button
+{
+    width: 300px;
+}
+
+/* ABOUT STYLING */
+
+.about-me-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.side-section
+{
+    min-height: 60vh;
+    background: blue;
+    text-align: center;
+    position: relative;
+    line-height: 60vh;
+    vertical-align: middle;
+}
+
+.about-me
+{
+    color: #fff;
+    min-height: 60vh;
+    background: rgb(53, 53, 92);
+    text-align: left;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-me p:first-child
+{
+    padding-top: 2rem;
+}
+
+.about-me p
+{
+    width: 87%;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.side-section h2
+{
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.gg-menu-grid-o
+{
+    color: #fff;
+    --ggs: 2;
+}
+
+.gg-menu-grid-o:nth-child(1)
+{
+    position: absolute;
+    top: 48%;
+    left: 10%;
+}
+
+.gg-menu-grid-o:nth-child(2)
+{
+    position: absolute;
+    top: 80%;
+    right: 10%;
+}
+
+.gg-menu-grid-o:nth-child(3)
+{
+    position: absolute;
+    top: 10%;
+    right: 35%;
+}
+
+/* end of about */
+
+/* PORTFOLIO STYLING */
+
+.portfolio-container
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 4rem 0;
+    align-items: center;
+}
+
+.portfolio-images-wrapper
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 15px;
+    grid-auto-rows: minmax(100px, auto);
+    min-height: 60vh;
+    margin: 10px auto;
+    margin-bottom: 50px;
+} 
+
+.portfolio-image img
+{
+    width: 270px;
+    border: 1px solid gray;
+}
+
+/* END OF PORTFOLIO */
+
+/* TESTIMONIAL */
+
+.testimonials-container
+{
+    background-color: blue;
+    min-height: 95vh;
+}
+
+
+.empty
+{
+    min-height: 42vh;
+}
+
+.testimonial-slider
+{
+    position: relative;
+}
+
+
+.next
+{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    --ggs: 1.5;
+    color: green;
+    cursor: pointer;
+}
+
+.previous
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    --ggs: 1.5;
+    color: green;
+    cursor: pointer;
+}
+
+.slick-dots
+{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.slick-dots button
+{
+    font-size: 0;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(15, 15, 15,0.5);
+    cursor: pointer;
+}
+
+.slick-dots .slick-active button
+{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.slick-dots ul
+{
+    margin: 0 auto;
+}
+
+.slick-dots li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+.testimonial-card-container
+{
+    width: 85%;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.testimonial-card
+{
+    position: relative;
+    display: inline-block;
+    min-height: 270px;
+    width: 200px;
+    background-color: green;
+    color: #fff;
+    border-radius: 20px;
+    margin: 0 5px;
+    padding-left: 30px;
+}
+
+.card-header
+{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card-header img
+{
+    display: block;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.card-body
+{
+    width: 80%;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.card-body p
+{
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.card-footer
+{
+    position: absolute;
+    bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* END OF TESTIMONIAL */
+
+/* contact */
+
+.contact-me
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 120vh;
+    background-image: url("../../media/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social-icon
+{
+    color: #fff;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.socials,.email
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.socials
+{
+    position: absolute;
+    top: 10%;
+    padding: 0 25px;
+}
+
+.email
+{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.email form input,textarea
+{
+    display: block;
+    width: 35rem;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0;
+    color: #000;
+}
+
+.email form .contact-message
+{
+    height: 120px;
+}
+
+.email form input:focus::placeholder,textarea:focus::placeholder
+{
+    transition: opacity 0.5s 0.5s ease-in-out;
+    opacity: 0.35;
+}
+
+.email form input::placeholder ,textarea::placeholder
+{
+    /* position: absolute;
+    top: 2px; */
+    text-align: left;
+    color: blue;
+    font-weight: 500;
+}
+
+.email form  input[type=submit]
+{
+    width: 20rem;
+    margin: 15px auto;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(27, 9, 9);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.email form  input[type=submit]:hover
+{
+    color: rgb(27, 9, 9);
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* end of contact */
+
+
+/* MEDIA QUARIES */
+
+@media  (min-width: 750px) 
+{
+    .brand-details-container
+    {
+        flex-direction: row;
+    }
+
+    .hire-me
+    {
+        width: 30%;
+    }
+
+    .hire-me button
+    {
+        width: 70%;
+    }
+
+    .about-brand
+    {
+        font-size: 16px;
+    }
+
+    .about-brand-body
+    {
+        width: 85%;
+    }
+
+    .about-brand-content
+    {
+        font-weight: 400;
+        width: 90%;
+    }
+
+    .about-me-container
+    {
+        flex-direction: row;
+    }
+
+    .side-section
+    {
+        width: 50%;
+        min-height: 80vh;
+        line-height: 80vh;
+    }
+
+    .about-me
+    {
+        width: 50%;
+        min-height: 80vh;
+    }
+
+    .portfolio-container
+    {
+        flex-direction: row;
+        padding-left: 2rem;
+    }
+
+    .testimonial-card
+    {
+        min-height: 370px;
+        width: 200px;
+    }
+
+    .card-header
+    {
+        top: -15%;
+    }
+}
+
+@media  (min-width: 1400px) 
+{
+
+    html
+    {
+        font-size: 14.5px;
+    }
+
+    .portfolio-images-wrapper
+    {
+        width: 70%;
+        grid-template-columns: repeat(3, 1fr);
+    } 
+
+    .portfolio-btn
+    {
+        width: 30%;
+    }
+
+    .portfolio-image img
+    {
+        width: 20rem;
+    }
+
+    .email form input,textarea
+    {
+        width: 65rem;
+        height: 45px;
+
+    }
+
+}
+
+@media (min-width: 650px) and (max-width:1000px)
+{
+    html
+    {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 350px) and (max-width:1000px)
+{
+    .portfolio-image img
+    {
+        width: 16rem;
+    }
+}
+
+@media (min-width: 0px) and (max-width:350px)
+{
+    .portfolio-image img
+    {
+        width: 10rem;
+    }
+}
